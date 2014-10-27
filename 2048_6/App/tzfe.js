@@ -1,0 +1,1 @@
+var tzfeApp = angular.module('tzfe', ['ui.router', 'tzfe.common']);

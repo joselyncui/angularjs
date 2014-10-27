@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="tzfe">
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=no" />
+
+        <link rel="stylesheet/less" type="text/css" href="App/Common/style/main.less" />
+        <link rel="stylesheet/less" type="text/css" href="App/Common/style/media.less" />
+        <link rel="stylesheet/less" type="text/css" href="App/Common/style/animate.less" />
+
+        <link rel="stylesheet" href="Libs/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="Libs/bootstrap/css/bootstrap-responsive.min.css">
+        <script src="Libs/jquery/jquery-2.1.1.min.js"></script>
+        <script src="Libs/angularjs/angular.js"></script>
+        <script src="Libs/angularjs/angular-ui-router.js"></script>
+        <script src="Libs/angularjs/angular-resource.js"></script>
+        <script src="Libs/bootstrap/js/bootstrap.min.js"></script>
+        <script src="Libs/less/less-1.7.0.min.js"></script>
+        <script src="Libs/swipe/swipe.js"></script>
+
+    </head>
+    <body>
+
+        <div>
+            <ui-view></ui-view>
+        </div>
+
+        <!-- App -->
+        <script src="App/tzfe.js"></script>
+        <!-- App Utils -->
+        <script src="App/AppUtils/Routing.js"></script>
+        <script src="App/AppUtils/Constants.js"></script>
+
+        <script src="App/Common/CommonModule.js"></script>
+        <script src="App/Common/Controllers/GameCtrl.js"></script>
+        <script src="App/Common/Services/GameService.js"></script>
+
+    </body>
+</html>

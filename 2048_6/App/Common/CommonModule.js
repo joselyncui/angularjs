@@ -1,0 +1,1 @@
+var tzfeCommon = angular.module('tzfe.common', []);

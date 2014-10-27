@@ -1,0 +1,65 @@
+<div class="main-container">
+    <div class="heading">
+        <h1 class="title">2048</h1>
+        <div class="scores-container">
+            <div class="score-container">
+                {{currentScore}}
+                <div class="score" ng-class="{'score-addition' : isAdd}">+{{newScore}}</div>
+            </div>
+            <div class="best-container">{{bestScore}}</div>
+        </div>
+    </div>
+    <div class="above-game">
+        <p class="game-intro">Join the numbers and get to the <strong>2048 tile!</strong></p>
+        <a class="restart-button" ng-click="initGame()">New Game</a>
+    </div>
+    <div class="game-container">
+        <div class="game-message" ng-show="gameInfo.isGameOver">
+            <p>Game over!</p>
+            <div class="lower">
+                <a ng-click="initGame()">Try again</a>
+            </div>
+        </div>
+        <div class="game-message" ng-show="gameInfo.isGameWin">
+            <p>You win!</p>
+            <div class="lower">
+                <a ng-click="initGame()">Keep going</a>
+            </div>
+        </div>
+        <div class="grid-container">
+            <div class="grid-row">
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+            </div>
+            <div class="grid-row">
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+            </div>
+            <div class="grid-row">
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+            </div>
+            <div class="grid-row">
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+            </div>
+        </div>
+
+        <div class="tile-container">
+            <div ng-repeat="cell in grid track by $index">
+                <div ng-if="cell.value != -1" class="tile tile-position-{{cell.x}}-{{cell.y}} tile-{{cell.value}}" ng-class="{'merged':cell.merged,'tile-new':cell.isNew,'copy':cell.isCopy}">
+                    <div class="tile-inner">{{cell.value}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
